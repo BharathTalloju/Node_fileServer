@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from time import gmtime, strftime
 
 serverLogFilename = "server_debug.log"

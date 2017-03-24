@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import os.path
 
 serverName = raw_input("Enter the server host name/ IP address: ").strip()

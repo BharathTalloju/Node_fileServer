@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from serverLog import *
 from config_details import *
 from json_lib import *

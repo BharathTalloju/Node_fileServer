@@ -1,6 +1,4 @@
-#!/usr/bin/python
 import socket
-import sys
 
 def getServerHostName():
     with open('server.prop') as f:
@@ -14,18 +12,21 @@ def writeToFile(filename, data):
         f.write(data)
     return
 
+def sendFile(file_name, conn):
+
+    with open('./sharedFolder'+file_name, "r")
+
 HOST, PORT = getServerHostName()
-PORT = 50001
+PORT = 50002
 
 s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-s.bind((HOST, 50001))
+s.bind((HOST, PORT))
 s.listen(5)
 
 while True:
     conn, addr = s.accept()
-    data = ''
-    buff = conn.recv(1024)
-    while len(buff):
-        data += buff
-        buff = conn.recv(1024)
-    writeToFile("files_catalog.json",data)
+    data = conn.recv(5)
+
+    if data.strip() == "fs":
+        file_name = conn.recv(64)
+        sendFile(file_name.strip(), conn)

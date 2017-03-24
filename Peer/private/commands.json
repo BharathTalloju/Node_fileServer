@@ -1,5 +1,7 @@
 {
   "create_catalog": ["./create_catalog.js", ">", "/dev/null"],
   "send_catalog": ["./sendCatalog.py", ">>", "./logs/send_catalog.log"],
-  "start_reciever": ["./recieve_files_catalog.py"]
+  "start_receiver": ["./recieve_files_catalog.py" , ">", "/dev/null"],
+  "change_server": ["./addServer.py"],
+  "show_files": ["./show_files.py"]
 }

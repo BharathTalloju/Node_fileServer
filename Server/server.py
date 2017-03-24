@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import socket
 import json
 from config_details import *
@@ -5,7 +6,7 @@ from serverLog import *
 from json_lib import *
 from jsonmerge import merge
 from pprint import pprint
-
+from create_files_catalog import *
 
 
 def writeCatalog(catalog):
@@ -46,6 +47,7 @@ def mergeNewCatalog(peer_catalog):
 
         writeToLog(serverLogFilename, "\nNew Log: " + validateAndStringifyJson(peer_catalog))
         writeToLog(serverLogFilename, "\nMerged Log: "+ validateAndStringifyJson(catalog))
+        return catalog
     except ValueError as err:
         print err
 
@@ -66,4 +68,11 @@ while True:
             break
         data += buff
     writeToLog(serverLogFilename, __name__+": Received catalog: " + data)
-    mergeNewCatalog(validateAndCreateJson(data))
+    catalog = mergeNewCatalog(validateAndCreateJson(data))
+    files_catalog = create_files_catalog(properties['files_catalog'], catalog)
+    writeToFile(properties["files_catalog"], validateAndStringifyJson(files_catalog))
+
+    files_catalog = validateAndStringifyJson(files_catalog)
+    for peer in catalog["Peers"]:
+        sendPeersCatalog(files_catalog, peer["id"])
+

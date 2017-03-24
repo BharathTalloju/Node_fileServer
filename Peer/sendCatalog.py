@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import socket
 
 def getServerHostName():
@@ -17,5 +18,4 @@ s.connect((HOST, PORT))
 
 with open(catalog_file_path, 'r') as f:
     buffer = f.read()
-    print "Read catalog: ", buffer
     s.send(buffer)

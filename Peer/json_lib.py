@@ -1,5 +1,4 @@
 import json
-from serverLog import *
 
 def validateAndStringifyJson(data):
     """
@@ -9,7 +8,6 @@ def validateAndStringifyJson(data):
     try:
         return json.dumps(data, indent=4)
     except NameError as err:
-        writeToLog( serverLogFilename, "Error stringifying the json object, skipping." )
         return None
 
 def validateAndCreateJson(data):
