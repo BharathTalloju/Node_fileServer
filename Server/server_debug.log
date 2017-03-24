@@ -1,0 +1,604 @@
+
+2017-03-24 16:15:41 :	__main__: Server listening at 192.168.1.3:5000
+2017-03-24 16:15:43 :	__main__: Accepted Connection from ('192.168.1.3', 59000)
+2017-03-24 16:15:43 :	__main__: Received catalog: {
+    "id": "192.168.1.3",
+    "files": [
+        { "name": "8ZJCq93.jpg", "size": 138461 },
+        { "name": "FzCIHZ3.jpg", "size": 114564 },
+        { "name": "jessica_jones_by_reverendtundra-d9igrqp.png", "size": 83450 },
+        { "name": "product-image-superman-1-featured-image.jpg", "size": 131164 },
+        { "name": "superman_minimal_wallpaper_by_postman0-d69u1j5.jpg", "size": 92579 },
+        { "name": "wallpaper_1328831091.jpg", "size": 72789 }
+    ]
+}
+2017-03-24 16:15:43 :	__main__: Read catalog: 
+2017-03-24 16:15:43 :	
+2017-03-24 16:16:18 :	__main__: Server listening at 192.168.1.3:5000
+2017-03-24 16:16:19 :	__main__: Accepted Connection from ('192.168.1.3', 60050)
+2017-03-24 16:16:19 :	__main__: Received catalog: {
+    "id": "192.168.1.3",
+    "files": [
+        { "name": "8ZJCq93.jpg", "size": 138461 },
+        { "name": "FzCIHZ3.jpg", "size": 114564 },
+        { "name": "jessica_jones_by_reverendtundra-d9igrqp.png", "size": 83450 },
+        { "name": "product-image-superman-1-featured-image.jpg", "size": 131164 },
+        { "name": "superman_minimal_wallpaper_by_postman0-d69u1j5.jpg", "size": 92579 },
+        { "name": "wallpaper_1328831091.jpg", "size": 72789 }
+    ]
+}
+2017-03-24 16:16:19 :	__main__: Read catalog: 
+2017-03-24 16:16:19 :	{
+    "Peers": [
+        
+    ]
+}
+2017-03-24 16:16:19 :	
+Merged Catalog: 
+{
+    "Peers": [
+        {
+            "files": [
+                {
+                    "name": "8ZJCq93.jpg", 
+                    "size": 138461
+                }, 
+                {
+                    "name": "FzCIHZ3.jpg", 
+                    "size": 114564
+                }, 
+                {
+                    "name": "jessica_jones_by_reverendtundra-d9igrqp.png", 
+                    "size": 83450
+                }, 
+                {
+                    "name": "product-image-superman-1-featured-image.jpg", 
+                    "size": 131164
+                }, 
+                {
+                    "name": "superman_minimal_wallpaper_by_postman0-d69u1j5.jpg", 
+                    "size": 92579
+                }, 
+                {
+                    "name": "wallpaper_1328831091.jpg", 
+                    "size": 72789
+                }
+            ], 
+            "id": "192.168.1.3"
+        }
+    ]
+}
+2017-03-24 16:16:19 :	
+New Log: {
+    "files": [
+        {
+            "name": "8ZJCq93.jpg", 
+            "size": 138461
+        }, 
+        {
+            "name": "FzCIHZ3.jpg", 
+            "size": 114564
+        }, 
+        {
+            "name": "jessica_jones_by_reverendtundra-d9igrqp.png", 
+            "size": 83450
+        }, 
+        {
+            "name": "product-image-superman-1-featured-image.jpg", 
+            "size": 131164
+        }, 
+        {
+            "name": "superman_minimal_wallpaper_by_postman0-d69u1j5.jpg", 
+            "size": 92579
+        }, 
+        {
+            "name": "wallpaper_1328831091.jpg", 
+            "size": 72789
+        }
+    ], 
+    "id": "192.168.1.3"
+}
+2017-03-24 16:16:19 :	
+Merged Log: {
+    "Peers": [
+        {
+            "files": [
+                {
+                    "name": "8ZJCq93.jpg", 
+                    "size": 138461
+                }, 
+                {
+                    "name": "FzCIHZ3.jpg", 
+                    "size": 114564
+                }, 
+                {
+                    "name": "jessica_jones_by_reverendtundra-d9igrqp.png", 
+                    "size": 83450
+                }, 
+                {
+                    "name": "product-image-superman-1-featured-image.jpg", 
+                    "size": 131164
+                }, 
+                {
+                    "name": "superman_minimal_wallpaper_by_postman0-d69u1j5.jpg", 
+                    "size": 92579
+                }, 
+                {
+                    "name": "wallpaper_1328831091.jpg", 
+                    "size": 72789
+                }
+            ], 
+            "id": "192.168.1.3"
+        }
+    ]
+}
+2017-03-24 16:16:33 :	files catalog created{
+    "files": [
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "8ZJCq93.jpg", 
+            "size": 138461
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "FzCIHZ3.jpg", 
+            "size": 114564
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "jessica_jones_by_reverendtundra-d9igrqp.png", 
+            "size": 83450
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "product-image-superman-1-featured-image.jpg", 
+            "size": 131164
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "superman_minimal_wallpaper_by_postman0-d69u1j5.jpg", 
+            "size": 92579
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "wallpaper_1328831091.jpg", 
+            "size": 72789
+        }
+    ]
+}
+2017-03-24 16:16:33 :	send_peer_list: Sending files catalog to192.168.1.3
+2017-03-24 16:25:28 :	files catalog created{
+    "files": [
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "8ZJCq93.jpg", 
+            "size": 138461
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "FzCIHZ3.jpg", 
+            "size": 114564
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "jessica_jones_by_reverendtundra-d9igrqp.png", 
+            "size": 83450
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "product-image-superman-1-featured-image.jpg", 
+            "size": 131164
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "superman_minimal_wallpaper_by_postman0-d69u1j5.jpg", 
+            "size": 92579
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "wallpaper_1328831091.jpg", 
+            "size": 72789
+        }
+    ]
+}
+2017-03-24 16:25:28 :	send_peer_list: Sending files catalog to192.168.1.3
+2017-03-24 16:25:29 :	files catalog created{
+    "files": [
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "8ZJCq93.jpg", 
+            "size": 138461
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "FzCIHZ3.jpg", 
+            "size": 114564
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "jessica_jones_by_reverendtundra-d9igrqp.png", 
+            "size": 83450
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "product-image-superman-1-featured-image.jpg", 
+            "size": 131164
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "superman_minimal_wallpaper_by_postman0-d69u1j5.jpg", 
+            "size": 92579
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "wallpaper_1328831091.jpg", 
+            "size": 72789
+        }
+    ]
+}
+2017-03-24 16:25:29 :	send_peer_list: Sending files catalog to192.168.1.3
+2017-03-24 16:25:30 :	files catalog created{
+    "files": [
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "8ZJCq93.jpg", 
+            "size": 138461
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "FzCIHZ3.jpg", 
+            "size": 114564
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "jessica_jones_by_reverendtundra-d9igrqp.png", 
+            "size": 83450
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "product-image-superman-1-featured-image.jpg", 
+            "size": 131164
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "superman_minimal_wallpaper_by_postman0-d69u1j5.jpg", 
+            "size": 92579
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "wallpaper_1328831091.jpg", 
+            "size": 72789
+        }
+    ]
+}
+2017-03-24 16:25:30 :	send_peer_list: Sending files catalog to192.168.1.3
+2017-03-24 16:25:31 :	files catalog created{
+    "files": [
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "8ZJCq93.jpg", 
+            "size": 138461
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "FzCIHZ3.jpg", 
+            "size": 114564
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "jessica_jones_by_reverendtundra-d9igrqp.png", 
+            "size": 83450
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "product-image-superman-1-featured-image.jpg", 
+            "size": 131164
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "superman_minimal_wallpaper_by_postman0-d69u1j5.jpg", 
+            "size": 92579
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "wallpaper_1328831091.jpg", 
+            "size": 72789
+        }
+    ]
+}
+2017-03-24 16:25:31 :	send_peer_list: Sending files catalog to192.168.1.3
+2017-03-24 16:25:32 :	files catalog created{
+    "files": [
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "8ZJCq93.jpg", 
+            "size": 138461
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "FzCIHZ3.jpg", 
+            "size": 114564
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "jessica_jones_by_reverendtundra-d9igrqp.png", 
+            "size": 83450
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "product-image-superman-1-featured-image.jpg", 
+            "size": 131164
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "superman_minimal_wallpaper_by_postman0-d69u1j5.jpg", 
+            "size": 92579
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "wallpaper_1328831091.jpg", 
+            "size": 72789
+        }
+    ]
+}
+2017-03-24 16:25:32 :	send_peer_list: Sending files catalog to192.168.1.3
+2017-03-24 16:25:33 :	files catalog created{
+    "files": [
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "8ZJCq93.jpg", 
+            "size": 138461
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "FzCIHZ3.jpg", 
+            "size": 114564
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "jessica_jones_by_reverendtundra-d9igrqp.png", 
+            "size": 83450
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "product-image-superman-1-featured-image.jpg", 
+            "size": 131164
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "superman_minimal_wallpaper_by_postman0-d69u1j5.jpg", 
+            "size": 92579
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "wallpaper_1328831091.jpg", 
+            "size": 72789
+        }
+    ]
+}
+2017-03-24 16:25:33 :	send_peer_list: Sending files catalog to192.168.1.3
+2017-03-24 16:25:33 :	files catalog created{
+    "files": [
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "8ZJCq93.jpg", 
+            "size": 138461
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "FzCIHZ3.jpg", 
+            "size": 114564
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "jessica_jones_by_reverendtundra-d9igrqp.png", 
+            "size": 83450
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "product-image-superman-1-featured-image.jpg", 
+            "size": 131164
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "superman_minimal_wallpaper_by_postman0-d69u1j5.jpg", 
+            "size": 92579
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "wallpaper_1328831091.jpg", 
+            "size": 72789
+        }
+    ]
+}
+2017-03-24 16:25:33 :	send_peer_list: Sending files catalog to192.168.1.3
+2017-03-24 16:25:34 :	files catalog created{
+    "files": [
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "8ZJCq93.jpg", 
+            "size": 138461
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "FzCIHZ3.jpg", 
+            "size": 114564
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "jessica_jones_by_reverendtundra-d9igrqp.png", 
+            "size": 83450
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "product-image-superman-1-featured-image.jpg", 
+            "size": 131164
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "superman_minimal_wallpaper_by_postman0-d69u1j5.jpg", 
+            "size": 92579
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "wallpaper_1328831091.jpg", 
+            "size": 72789
+        }
+    ]
+}
+2017-03-24 16:25:34 :	send_peer_list: Sending files catalog to192.168.1.3
+2017-03-24 16:25:35 :	files catalog created{
+    "files": [
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "8ZJCq93.jpg", 
+            "size": 138461
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "FzCIHZ3.jpg", 
+            "size": 114564
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "jessica_jones_by_reverendtundra-d9igrqp.png", 
+            "size": 83450
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "product-image-superman-1-featured-image.jpg", 
+            "size": 131164
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "superman_minimal_wallpaper_by_postman0-d69u1j5.jpg", 
+            "size": 92579
+        }, 
+        {
+            "peers_list": [
+                "192.168.1.3"
+            ], 
+            "name": "wallpaper_1328831091.jpg", 
+            "size": 72789
+        }
+    ]
+}
+2017-03-24 16:25:35 :	send_peer_list: Sending files catalog to192.168.1.3

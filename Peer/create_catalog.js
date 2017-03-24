@@ -1,6 +1,7 @@
 var fs = require('fs');
 var merge_json = require('merge-json');
 var json_beautify = require("json-beautify");
+var ip = require("ip");
 
 var shared_dir_path = './sharedFolder';
 var catalog = null;
@@ -37,10 +38,10 @@ var read_sharedFolder = function(){
 
 	console.log(json_beautify(catalog, null, 4, 100));
 
-	if(fs.existsSync(catalog_file_path)){
-		var prev_catalog = JSON.parse( fs.readFileSync(catalog_file_path) );
-		catalog = merge_json.merge(prev_catalog, catalog);
-	}
+//	if(fs.existsSync(catalog_file_path)){
+//		var prev_catalog = JSON.parse( fs.readFileSync(catalog_file_path) );
+//		catalog = merge_json.merge(prev_catalog, catalog);
+//	}
 
 	fs.writeFileSync(catalog_file_path, json_beautify(catalog, null, 4, 100));
 
@@ -55,9 +56,7 @@ var create_catalog = function(add){
 	read_sharedFolder();
 };
 
-require('dns').lookup(require('os').hostname(), function(err, add, family){
-	create_catalog(add);
-});
+create_catalog(ip.address())
 
 var print_file_stats = function(stats){
 	console.log('\t\tSize: '+(stats.size/1000) + 'KB');

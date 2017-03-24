@@ -1,32 +1,15 @@
 import socket
 import json
+from config_details import *
+from serverLog import *
+from json_lib import *
 from jsonmerge import merge
 from pprint import pprint
 
-catalogFilename = 'catalog.json'
-serverLogFilename = 'server_log.log'
-PORT = 5000
-HOST = ''
 
-
-def writeToLog(fileName, data):
-    with open(fileName,'a') as logFile:
-        logFile.write(data)
-
-def validateAndStringifyJson(data):
-    try:
-        return json.dumps(data, indent=4)
-    except NameError as err:
-        print "Error stringifying the json object, skipping."
-        return None
-
-def validateAndCreateJson(data):
-    try:
-        return json.loads(data)
-    except ValueError as err:
-        print "Error creating the json, skipping."
 
 def writeCatalog(catalog):
+    """Writes the catalog to disk"""
     #convert to string
     catalog = validateAndStringifyJson(catalog)
 
@@ -39,12 +22,13 @@ def writeCatalog(catalog):
 
 
 def mergeNewCatalog(peer_catalog):
+    """merges the new 'peer_catalog' to the existing catalog"""
     try:
         #read the existing catalog into memory
         catalog = ''
         with open(catalogFilename, 'r') as catalog_file:
             catalog = catalog_file.read()
-            writeToLog(serverLogFilename, "\n\n\nRead catalog: ")
+            writeToLog(serverLogFilename, __name__ + ": Read catalog: ")
             writeToLog(serverLogFilename, catalog)
             catalog = validateAndCreateJson(catalog)
 
@@ -70,15 +54,16 @@ s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 s.bind((HOST, PORT))
 
 s.listen(5)
+writeToLog(serverLogFilename, __name__ + ": Server listening at " + HOST + ":" + str(PORT))
 while True:
     conn, addr = s.accept()
-    print addr, "Connected"
+    writeToLog(serverLogFilename, __name__ + ": Accepted Connection from " + str(addr))
 
     data = ''
     while True:
         buff = conn.recv(1024)
-        if not buff:
+        if not len(buff):
             break
         data += buff
-
+    writeToLog(serverLogFilename, __name__+": Received catalog: " + data)
     mergeNewCatalog(validateAndCreateJson(data))

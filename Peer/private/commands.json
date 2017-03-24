@@ -1,0 +1,5 @@
+{
+  "create_catalog": ["./create_catalog.js", ">", "/dev/null"],
+  "send_catalog": ["./sendCatalog.py", ">>", "./logs/send_catalog.log"],
+  "start_reciever": ["./recieve_files_catalog.py"]
+}
