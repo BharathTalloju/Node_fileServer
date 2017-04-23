@@ -1,4 +1,5 @@
-#!/usr/bin/python
+#!/usr/bin/python2
+
 import socket
 import json
 from config_details import *
@@ -7,7 +8,16 @@ from json_lib import *
 from jsonmerge import merge
 from pprint import pprint
 from create_files_catalog import *
+from os import system
 
+def create_dummy_catalogs():
+    cmd = '''echo '{"files": []}' > files_catalog.json'''
+    system(cmd)
+    cmd = '''echo '{"Peers":[]}' > catalog.json'''
+    system(cmd)
+    system(">server_debug.log")
+
+create_dummy_catalogs()
 
 def writeCatalog(catalog):
     """Writes the catalog to disk"""

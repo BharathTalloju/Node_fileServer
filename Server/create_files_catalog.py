@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 from serverLog import *
 from config_details import *
@@ -61,13 +61,13 @@ def create_files_catalog(files_catalog_filename, catalog):
     return files_catalog
 
 
-catalog = getCatalog()
-files_catalog = create_files_catalog(properties['files_catalog'], catalog)
+# catalog = getCatalog()
+# files_catalog = create_files_catalog(properties['files_catalog'], catalog)
 
-writeToFile(properties["files_catalog"], validateAndStringifyJson(files_catalog))
+# writeToFile(properties["files_catalog"], validateAndStringifyJson(files_catalog))
 
-files_catalog = validateAndStringifyJson(files_catalog)
-for peer in catalog["Peers"]:
-    sendPeersCatalog(files_catalog, peer["id"])
+# files_catalog = validateAndStringifyJson(files_catalog)
+# for peer in catalog["Peers"]:
+#     sendPeersCatalog(files_catalog, peer["id"])
 
 

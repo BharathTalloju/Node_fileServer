@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 import socket
 import fcntl
@@ -32,7 +32,7 @@ def updatePropertiesFile(**kwargs):
 
 
 def getHostName():
-    HOST = get_ip_address('wlan0')
+    HOST = get_ip_address('wlp6s0')
     return HOST
 
 HOST = getHostName()
