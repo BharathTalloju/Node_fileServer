@@ -1,23 +1,31 @@
-import socket
+#!/usr/bin/python2
 
-def getServerHostName():
-    with open('server.prop') as f:
-        line = f.readline().strip()
-        line = line.split(':')
-        line[1] = int(line[1])
-        return line
+"""
+Reads the File name and sends the file to the requesting peer
+"""
+
+import subprocess
+import sys
+import socket
+import fcntl
+import struct
+
+def get_ip_address(ifname):
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    return socket.inet_ntoa(fcntl.ioctl(
+        s.fileno(),
+        0x8915,  # SIOCGIFADDR
+        struct.pack('256s', ifname[:15])
+    )[20:24])
 
 def writeToFile(filename, data):
     with open(filename, "w") as f:
         f.write(data)
     return
 
-def sendFile(file_name, conn):
 
-    with open('./sharedFolder'+file_name, "r")
-
-HOST, PORT = getServerHostName()
-PORT = 50002
+HOST = get_ip_address('wlp6s0')
+PORT = 5335
 
 s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 s.bind((HOST, PORT))
@@ -25,8 +33,7 @@ s.listen(5)
 
 while True:
     conn, addr = s.accept()
-    data = conn.recv(5)
 
-    if data.strip() == "fs":
-        file_name = conn.recv(64)
-        sendFile(file_name.strip(), conn)
+    file_name = conn.recv(64)
+
+    subprocess.Popen(['./send_file', file_name, addr])

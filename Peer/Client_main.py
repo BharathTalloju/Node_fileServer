@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 import subprocess
 from json_lib import *
@@ -14,7 +14,8 @@ def getCommands():
     return commands_dict
 
 commands = getCommands()
-subprocess.Popen(commands["start_receiver"])
+subprocess.Popen('./recieve_files_catalog.py > catalog_receiver.log')
+subprocess.Popen('./peer_file_server.py > file_receiver.log')
 
 while True:
     cmd = raw_input('>').strip().split()
@@ -24,4 +25,4 @@ while True:
         subprocess.Popen(commands[cmd[0]])
         continue
 
-    subprocess.Popen(commands[cmd[0]])
+    subprocess.Popen(commands[cmd] + cmd[1:])

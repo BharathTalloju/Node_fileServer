@@ -1,24 +1,29 @@
-#!/usr/bin/python
-import socket
-import sys
+#!/usr/bin/python2
 
-def getServerHostName():
-    with open('server.prop') as f:
-        line = f.readline().strip()
-        line = line.split(':')
-        line[1] = int(line[1])
-        return line
+import sys
+import socket
+import fcntl
+import struct
+
+def get_ip_address(ifname):
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    return socket.inet_ntoa(fcntl.ioctl(
+        s.fileno(),
+        0x8915,  # SIOCGIFADDR
+        struct.pack('256s', ifname[:15])
+    )[20:24])
+
 
 def writeToFile(filename, data):
     with open(filename, "w") as f:
         f.write(data)
     return
 
-HOST, PORT = getServerHostName()
-PORT = 50001
+HOST= get_ip_address('wlp6s0')
+PORT = 5334
 
 s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-s.bind((HOST, 50001))
+s.bind((HOST, PORT))
 s.listen(5)
 
 while True:
